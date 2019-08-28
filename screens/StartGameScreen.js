@@ -12,8 +12,10 @@ import {
 import Card from '../components/Card';
 import Input from '../components/Input';
 import NumberContainer from '../components/NumberContainer';
+import BodyText from "../components/BodyText";
 
 import Colors from '../constants/colors';
+import DefaultStyles from '../constants/default-styles';
 
 const StartGameScreen = props => {
 
@@ -59,9 +61,9 @@ const StartGameScreen = props => {
     return (
         <TouchableWithoutFeedback onPress={() => {Keyboard.dismiss()}}>
             <View style={styles.screen}>
-                <Text style={styles.title}>Start Game Screen!</Text>
+                <Text style={{...DefaultStyles.titleText, ...styles.title}}>Start Game Screen!</Text>
                 <Card style={styles.inputContainer}>
-                    <Text>Select a number!</Text>
+                    <BodyText>Select a number!</BodyText>
                     <Input
                         style={styles.input}
                         keyboardType="numeric"
@@ -96,9 +98,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
     },
     title: {
-        fontSize: 20,
         marginVertical: 10,
-        fontFamily: 'open-sans-bold',
     },
     buttonContainer: {
         flexDirection: 'row',
