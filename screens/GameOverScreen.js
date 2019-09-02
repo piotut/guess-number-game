@@ -9,6 +9,7 @@ import {
 
 import BodyText from "../components/BodyText";
 import TitleText from "../components/TitleText";
+import MainButton from "../components/MainButton";
 
 const GameOverScreen = props => {
     return (
@@ -21,7 +22,7 @@ const GameOverScreen = props => {
             />
             <BodyText>Number of rounds: {props.roundsNumber}</BodyText>
             <BodyText>Number was: {props.userNumber}</BodyText>
-            <Button title="New Game" onPress={props.onRestart}/>
+            <MainButton onPress={props.onRestart}>New Game</MainButton>
         </View>
     )
 };
