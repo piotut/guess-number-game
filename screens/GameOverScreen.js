@@ -5,6 +5,7 @@ import {
     Text,
     Button,
     Image,
+    Dimensions,
 } from 'react-native';
 
 import BodyText from "../components/BodyText";
@@ -34,8 +35,8 @@ const styles = StyleSheet.create({
         alignItems: 'center',
     },
     image: {
-        width: '80%',
-        height: 300,
+        width: Dimensions.get('window').width * 0.7,
+        height: Dimensions.get('window').width * 0.7,
     }
 });
 
